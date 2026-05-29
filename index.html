@@ -11,8 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="/src/main.js"></script>
-    <!-- <link rel="stylesheet" href="/src/style.css" /> -->
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body class="bg-verde-800 font-sans">
     <div class="container mt-4 flex justify-center md:justify-start">
@@ -538,35 +537,6 @@
         </ul>
       </div>
     </footer>
-    <script>
-      const video = document.getElementById('video');
-      const temperatura = document.getElementById('temperatura');
-      const tempo = document.getElementById('tempo');
-      const dia = document.getElementById('dia');
-
-      const random = Math.floor(Math.random() * 10) + 20;
-      temperatura.innerText = `${random}º`;
-      tempo.innerText = random < 25 ? `🌧️ ${random + 5}%` : `🌤️`;
-      const date = new Date();
-      dia.innerText = date
-        .toLocaleDateString('pt-BR', {
-          weekday: 'long',
-        })
-        .replace('-feira', '');
-
-      video.src = random < 25 ? `${import.meta.env.BASE_URL}img/video_chuva.mp4` : `${import.meta.env.BASE_URL}img/video_sol.mp4`;
-
-      const mobileButton = document.getElementById('mobile-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-
-      mobileButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('flex');
-      });
-      mobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('flex');
-      });
-    </script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
