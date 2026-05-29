@@ -11,8 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.js"></script>
+    <!-- <link rel="stylesheet" href="/src/style.css" /> -->
   </head>
   <body class="bg-verde-800 font-sans">
     <div class="container mt-4 flex justify-center md:justify-start">
@@ -86,6 +86,7 @@
       <section
         class="relative text-white bg-linear-to-t from-verde-950/80 px-4 pt-12 pb-8 rounded-2xl overflow-hidden sm:px-8 sm:pt-64"
       >
+        <!-- src="/img/video_chuva.mp4" -->
         <video
           id="video"
           muted
@@ -95,7 +96,6 @@
           width="1280"
           height="720"
           class="absolute inset-0 -z-40 size-full object-cover animate-fade-in"
-          src="/src/img/video_chuva.mp4"
         ></video>
         <div
           class="bg-verde-950/60 flex max-sm:flex-col gap-2 p-4 rounded-md items-start sm:items-center mb-8 sm:bg-verde-950 sm:inline-flex sm:rounded-full sm:py-1 sm:pr-1 sm:pl-4s sm:gap-8"
@@ -554,8 +554,7 @@
         })
         .replace('-feira', '');
 
-      video.src =
-        random < 25 ? `/src/img/video_chuva.mp4` : `/src/img/video_sol.mp4`;
+      video.src = random < 25 ? `/img/video_chuva.mp4` : `/img/video_sol.mp4`;
 
       const mobileButton = document.getElementById('mobile-button');
       const mobileMenu = document.getElementById('mobile-menu');
