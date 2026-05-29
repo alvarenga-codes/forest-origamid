@@ -1,4 +1,4 @@
-// import './style.css';
+import './style.css';
 
 const video = document.getElementById('video');
       const temperatura = document.getElementById('temperatura');
