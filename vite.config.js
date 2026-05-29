@@ -3,5 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   base: '/forest-origamid/',
-  plugins: [tailwindcss()],
+  plugins: [
+    tailwindcss(),
+  ],
 })
